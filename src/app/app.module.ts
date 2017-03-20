@@ -24,10 +24,14 @@ import { DashboardComponent }	from './dashboard.component';
 				component: HeroesComponent
 			},
 			{
-			path: '',
-			redirectTo: '/dashboard',
-			pathMatch: 'full'
+				path: '',
+				redirectTo: '/dashboard',
+				pathMatch: 'full'
 			},
+			{
+				path: 'detail/:id',
+				component: HeroDetailComponent
+			}
 		])
 	],
 	declarations: [
