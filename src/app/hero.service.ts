@@ -52,4 +52,14 @@ export class HeroService {
 			.catch(this.handleError);
 	}
 
+	create(name: string) {
+		const url = this.heroesUrl;
+
+		return this.http
+			.post(url, JSON.stringify({name: name}), {headers: this.headers})
+			.toPromise()
+			.then(res => res.json().data)
+			.catch(this.handleError);
+	}
+
 }
